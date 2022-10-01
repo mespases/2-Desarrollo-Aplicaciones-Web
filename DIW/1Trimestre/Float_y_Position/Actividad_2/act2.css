@@ -1,0 +1,55 @@
+.content {
+  display: flex;
+  position: relative;
+  
+}
+
+.tejado {
+  height: 115px;
+  width: 800px;
+  background-color: red;
+  border: 5px solid black;
+}
+
+.pared {
+    position: fixed;
+    height: 700px;
+    width: 780px;
+    background-color: gray;
+    border: 5px solid black;
+    margin-left: 0.5em;
+    margin-top: 7.6em;
+}
+
+.ventana-l {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    border: 5px solid black;
+    margin-left: 2em;
+    margin-top: 9em;
+}
+
+.ventana-r {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    border: 5px solid black;
+    margin-left: 35em;
+    margin-top: 20em;
+}
+
+.puerta {
+    height: 250px;
+    width: 250px;
+    background-color: darkred;
+    border: 5px solid black;
+    font-size: 5em;
+    text-align: center;
+    line-height: 5em;
+    font-weight: bold;
+    margin-left: 3em;
+    margin-top: 5.55em;
+}

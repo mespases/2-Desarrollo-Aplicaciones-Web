@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 1em;
+        }
+
+        #text {
+            width: 20em;
+            height: 6em;
+            resize: none;
+            margin: 0 0 2em;
+        }
+
+        #btn {
+            width: 21em;
+            margin: 0 0 2em;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="text"></textarea>
+    <button id="btn">Enviar</button>
+    <canvas id="myCanv" width="900" height="500"></canvas>
+</body>
+<script>
+    var canvas = document.getElementById("myCanv")
+    var context = canvas.getContext("2d")
+    var textarea = document.getElementById("text")
+    var bnt = document.getElementById("btn")
+    var text = ""
+    var x = 450
+    var y = 150
+    var rotation = 0
+    var i = 1
+    
+    bnt.addEventListener("click", function () {  
+        text = textarea.value
+        i +=5
+    })
+
+    function Moveswoosh() {
+            rotation += i * Math.PI / 180; 
+            context.font = 'italic 23pt Arial';
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.beginPath()
+
+            context.save();
+            context.translate(x, y);
+            context.rotate(rotation);
+
+            context.textAlign = 'center';
+            context.fillText(text, 0, 0);
+            context.restore();
+
+            
+            window.requestAnimationFrame(() => {
+                Moveswoosh();
+            });
+        }
+        Moveswoosh();
+</script>
+</html>

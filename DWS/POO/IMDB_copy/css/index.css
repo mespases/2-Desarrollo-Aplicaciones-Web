@@ -1,0 +1,141 @@
+/**  new **/
+section.all_movies {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px auto;
+  padding-left: 10%;
+}
+
+section.all_movies div.film_box {
+  width: 300px;
+  height: 445px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #0e0e0ec2;
+  position: relative;
+  overflow: hidden;
+  width: 19%;
+  height: 100%;
+  margin: 5em;
+}
+
+section.all_movies div.film_box a.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 100%;
+  background-color: rgba(27, 27, 27, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all ease 0.3s;
+}
+
+section.all_movies div.film_box a.overlay i {
+  font-size: 2em;
+}
+
+section.all_movies div.film_box:hover a.overlay {
+  top: 0px;
+  transition: all ease 0.3s;
+}
+
+section.all_movies div.film_box div.img_box {
+  width: 100%;
+  height: 100%;
+}
+
+section.all_movies div.film_box div.img_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+section.all_movies div.film_box a div.text_box {
+  background: linear-gradient(
+    360deg,
+    #161616b9 35%,
+    rgba(73, 73, 73, 0.23) 64%
+  );
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+section.all_movies div.film_box a div.text_box span.puntuacion {
+  background-color: yellow;
+  color: #080808;
+  font-weight: 600;
+  padding: 0 5px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  left: 100%;
+}
+
+.puntuacion,
+.bottom {
+  padding: 20px;
+}
+
+.movie_name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.movie_name span {
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: rgba(240, 240, 240, 0.85);
+}
+
+.movie_name strong {
+  color: #dfdfdf;
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+
+@media screen and (max-width: 1255px) {
+  section.all_movies div.film_box {
+    width: 35%;
+    margin: 4em;
+  }
+}
+
+@media screen and (max-width: 962px) {
+  section.all_movies div.film_box {
+    width: 34%;
+    margin: 3em;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  section.all_movies {
+    justify-content: center;
+  }
+
+  section.all_movies div.film_box {
+    width: 70%;
+    margin: 3em;
+  }
+
+}

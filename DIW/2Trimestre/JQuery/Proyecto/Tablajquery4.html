@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <style>
+            table, tr, th, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 15px;
+            }
+
+            #equipos{
+                border: 1px solid black;
+                padding: 15px;
+                width: 100%;
+            }
+
+            #editar{
+                border: 1px solid black;
+                padding: 15px;
+            }
+
+            div:not(#botonesEdit){
+                display: table-cell;
+            }
+            #botonesEdit{
+                height: 50px;
+            }
+        </style>
+    </head>
+<script type="text/javascript">
+
+        $(document).ready(function(){
+
+        var selected
+
+        $('.select').click(function () {
+            if ($(this).parent().parent().css("background-color") == "rgb(255, 255, 0)") {
+                $(this).parent().parent().css("background-color", "white")
+                $(this).html("Select")
+
+            } else {
+                $(this).parent().parent().css("background-color", "yellow")
+                $(this).html("Deselect")
+            }
+        })
+
+        $('.delete').click(function () {
+            $(this).parent().parent().remove()
+        })
+
+        var posicion = ""
+        $('.update').click(function () {
+            let position = $(this).parent().parent().children().eq(0).html()
+            let team = $(this).parent().parent().children().eq(1).html()
+            let points = $(this).parent().parent().children().eq(2).html()
+            $('#position').val(position)
+            $('#team').val(team)
+            $('#points').val(points)
+            posicion  = $(this).parent().parent()
+        })
+
+        $('#insertButton').click(function () {
+            let position = $('#position').val()
+            let team = $('#team').val()
+            let points = $('#points').val()
+
+            if (posicion != "") {
+                posicion.children().eq(0).html(position)
+                posicion.children().eq(1).html(team)
+                posicion.children().eq(2).html(points)
+                posicion = ""
+            } else {
+                let str = `<tr>
+                        <td>${position}</td>
+                        <td>${team}</td>
+                        <td>${points}</td>
+                        <td>
+                            <button class="select">Select</button>
+                            <button class="delete">Delete</button>
+                            <button class="update">Update</button>
+                        </td>
+                    </tr>`
+                let table = $('#tabla').append(str)
+            }
+
+            $('#position').val("")
+            $('#team').val("")
+            $('#points').val("")
+        })
+        });
+    
+</script>
+<body>
+    <div id="equipos">
+        <div>
+            <table id="tabla">
+                <tr>
+                    <th>Position</th>
+                    <th>Team</th>
+                    <th>Points</th>
+                    <th>Options</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Real Mallorca</td>
+                    <td>90</td>
+                    <td>
+                        <button class="select">Select</button>
+                        <button class="delete">Delete</button>
+                        <button class="update">Update</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Real Madrid</td>
+                    <td>85</td>
+                    <td>
+                        <button class="select">Select</button>
+                        <button class="delete">Delete</button>
+                        <button class="update">Update</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Valladolid</td>
+                    <td>72</td>
+                    <td>
+                        <button class="select">Select</button>
+                        <button class="delete">Delete</button>
+                        <button class="update">Update</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Getafe</td>
+                    <td>70</td>
+                    <td>
+                        <button class="select">Select</button>
+                        <button class="delete">Delete</button>
+                        <button class="update">Update</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Valencia</td>
+                    <td>69</td>
+                    <td>
+                        <button class="select">Select</button>
+                        <button class="delete">Delete</button>
+                        <button class="update">Update</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td>Levante</td>
+                    <td>68</td>
+                    <td>
+                        <button class="select">Select</button>
+                        <button class="delete">Delete</button>
+                        <button class="update">Update</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="editar">
+            <form>
+                <input type="hidden" name="row" id="row" value="">
+                Position:<br><input type="text" id="position" required><br>
+                Team:<br><input type="text" id="team" required><br>
+                Points:<br><input type="text" id="points" required><br>
+            </form>
+
+            <div id="botonesEdit">
+                <button id="insertButton">Insert</button>
+                <button id="cancelButton">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

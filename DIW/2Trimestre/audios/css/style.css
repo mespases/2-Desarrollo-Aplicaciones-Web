@@ -1,0 +1,47 @@
+div.box {
+    background: radial-gradient(#44423be8, #161616ed);
+    width: 25%;
+    height: 385px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 4em;
+}
+
+div.box img {
+    width: 150px;
+    margin-top: 3em;
+    opacity: 0.7;
+}
+
+div.box p {
+    color: #fbfbfb;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+div.box input{
+    width: 80%;
+}
+
+section.buttons_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.buttons_box i {
+    color: white;
+    margin: 13px 12px;
+}
+
+section.buttons_box i.px {
+    font-size: 26px;
+}
+
+section.buttons_box i.px_S {
+    font-size: 18px;
+}
+
+section.buttons_box i#play {
+    font-size: 50px;
+}

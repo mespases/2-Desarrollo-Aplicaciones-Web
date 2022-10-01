@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Manipulating the DOM</title>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!--  Setting or returning one or more style properties for selected elements -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('div').css('position', 'fixed')
+
+			$('div').on('mouseover click', () => {
+				for (let div of $('div')) {	
+					animarDiv(div)
+				}
+			})	
+		})
+
+		function posiciones(param) {  
+			let h = $(window).height() - 50
+			let w = $(window).width() - 50
+
+			let nh = Math.floor(Math.random() * h)
+			let nw = Math.floor(Math.random() * w)
+		
+			return [nh,nw]
+		}
+
+		function animarDiv(div) {
+			let nuevasPos = posiciones()
+			$(div).animate({top: nuevasPos[0], left: nuevasPos[1]}, 1000)
+		}
+		
+	</script>
+
+	<style type="text/css">
+		div {width: 60px; height:60px; margin:5px; float: left;}
+	</style>
+</head>
+<body>
+	<p id="result">&nbsp;</p>
+	<div style="background-color: blue;"></div>
+	<div style="background-color: green;"></div>
+	<div style="background-color: yellow;"></div>
+	<div style="background-color: #f11;"></div>
+</body>
+</html>

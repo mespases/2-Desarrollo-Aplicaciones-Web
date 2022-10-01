@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Activity test</title>
+</head>
+<body>
+    <p style="font-family: 'Courier New';">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+    <p style="font-family: 'Lucida Sans';">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+    <p style="font-family: Impact;">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+    <hr>
+
+    <a href="https://www.google.com/" target="_blanc">Google</a>
+    <a href="https://www.youtube.com/" target="_blanc">Youtube</a>
+    <hr>
+
+    <table border>
+        <tr>
+            <td>Hola</td>
+            <td>Hola</td>
+            <td>Hola</td>
+            <td>Hola</td>
+        </tr>
+        <tr>
+            <td>Hola</td>
+            <td>Hola</td>
+            <td>Hola</td>
+            <td>Hola</td>
+        </tr>
+        <tr>
+            <td>Hola</td>
+            <td>Hola</td>
+            <td>Hola</td>
+            <td>Hola</td>
+        </tr>
+        <tr>
+            <td>Hola</td>
+            <td>Hola</td>
+            <td>Hola</td>
+            <td>Hola</td>
+        </tr>
+    </table>
+    <hr>
+
+    <ul>
+        <ol>Lunes</ol>
+        <ol>Martes</ol>
+    </ul>
+    <ul>
+        <dt>Lunes</dt>
+        <dt>Martes</dt>
+    </ul>
+    <ul>
+        <dd>Lunes</dd>
+        <dd>Martes</dd>
+    </ul>
+    <hr>
+
+    <img src="img/56a1fb0417b755512307ca42d471215a.png" style="height: 250px;">
+    <hr>
+
+    <meter value="5" min="0" max="10"></meter>
+    <hr>
+
+    <audio controls>
+        <source src="audio/Sultans_Of_Swing.mp3" type="audio/mp3">
+    </audio>
+    <hr>
+
+    <video width="400" controls>
+        <source src="video/cocacola.mp4" type="video/mp4">
+    </video>
+    <hr>
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        var grd = ctx.createLinearGradient(0,0,200,0);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+
+        ctx.fillStyle = grd;
+        ctx.fillRect(10,10,150,80);
+    </script>
+    <hr>
+
+    <style type="text/css">
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+    </style>
+    <ul>
+        <li><a href="#" class="active">Inicio</a></li>
+        <li><a href="#">Info</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+    <hr>
+
+    <h2>Formulario</h2>
+    <form>
+        <input type="text" maxlength="60" size="45"><br>
+        <input type="password" minlength="6"><br>
+        <textarea maxlength="300" style="margin-top: 10px; height: 100px; width: 200px;"></textarea><br>
+        <input type="date">
+        <input type="color"><br>
+        <input type="range" min="1" max="10">
+        <input type="number" min="1" max="150"><br>
+        <input type="file"><br>
+        <input type="url"><br>
+        <input type="email"><br>
+        <input type="tel"><br>
+        <input type="time"><br>
+        <input type="datetime-local"><br>
+        <input type="week"><br>
+        <input type="month"><br>
+        <button name="Enviar">Enviar</button>
+        <input type="reset" name="Reset">
+    </form>
+
+<style>
+    input {
+        margin-top: 10px;
+    }
+</style>
+</body>
+</html>

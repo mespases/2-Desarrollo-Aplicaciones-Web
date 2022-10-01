@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap 4 Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container text-white bg-dark">
+      <h1>My First Bootstrap Page</h1>
+      <p class="lead">This is some text.</p>
+      <div>
+        <p class="lead">Texto de prueba</p>
+      </div>
+      <div>
+        <p class="lead">Texto de prueba 2</p>
+      </div>
+    </div>
+
+    <div class="container-fluid p-3 my-3 bg-dark">
+      <button class="btn-lg">Boton</button>
+    </div>
+
+    <table class="table-hover table-dark">
+      <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+      </tr>
+      <tr>
+        <td>Primera parte</td>
+        <td>Segunda parte</td>
+        <td>Tercera parte</td>
+      </tr>
+      <tr>
+        <td>Primera parte</td>
+        <td>Segunda parte</td>
+        <td>Tercera parte</td>
+      </tr>
+      <tr>
+        <td>Primera parte</td>
+        <td>Segunda parte</td>
+        <td>Tercera parte</td>
+      </tr>
+      <tr>
+        <td>Primera parte</td>
+        <td>Segunda parte</td>
+        <td>Tercera parte</td>
+      </tr>
+      <tr>
+        <td>Primera parte</td>
+        <td>Segunda parte</td>
+        <td>Tercera parte</td>
+      </tr>
+      <tr>
+        <td>Primera parte</td>
+        <td>Segunda parte</td>
+        <td>Tercera parte</td>
+      </tr>
+    </table>
+
+    <div class="alert alert-success">
+      <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+
+    <button class="btn btn-primary" disabled>
+      <span class="spinner-border spinner-border-sm"></span>
+      Loading..
+    </button>
+    <ul class="pagination pagination-lg">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+
+    <a href="#demo" data-toggle="collapse">Collapsible</a>
+    <div id="demo" class="collapse">Lorem ipsum dolor text....</div>
+
+    <nav class="navbar navbar-expand-sm bg-light">
+      <!-- Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link 2</a>
+        </li>
+        <li class="nav-item justify-content-center">
+          <a class="nav-link" href="#">Link 3</a>
+        </li>
+      </ul>
+    </nav>
+
+    <form action="/action_page.php" class="was-validated">
+      <div class="form-group">
+        <label for="uname">Username:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="uname"
+          placeholder="Enter username"
+          name="uname"
+          required
+        />
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input
+          type="password"
+          class="form-control"
+          id="pwd"
+          placeholder="Enter password"
+          name="pswd"
+          required
+        />
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="form-group form-check">
+        <label class="form-check-label">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            name="remember"
+            required
+          />
+          I agree on blabla.
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Check this checkbox to continue.</div>
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+  <button type="button" class="btn">Basic</button>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-link">Link</button>
+</html>

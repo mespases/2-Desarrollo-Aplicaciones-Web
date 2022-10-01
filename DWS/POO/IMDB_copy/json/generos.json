@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "nombre": "Romance"
+    },
+    {
+        "id": 2,
+        "nombre": "Drama"
+    },
+    {
+        "id": 3,
+        "nombre": "Aventura"
+    },
+    {
+        "id": 4,
+        "nombre": "Thriller"
+    },
+    {
+        "id": 5,
+        "nombre": "Acción"
+    },
+    {
+        "id": 6,
+        "nombre": "Ciencia Ficción"
+    },
+    {
+        "id": 7,
+        "nombre": "Animación"
+    },
+    {
+        "id": 8,
+        "nombre": "Comedia"
+    },
+    {
+        "id": 9,
+        "nombre": "Mafia"
+    },
+    {
+        "id": 10,
+        "nombre": "Crimen"
+    },
+    {
+        "id": 11,
+        "nombre": "Amistad"
+    },
+    {
+        "id": 12,
+        "nombre": "Racismo"
+    },
+    {
+        "id": 13,
+        "nombre": "Deporte"
+    }
+]

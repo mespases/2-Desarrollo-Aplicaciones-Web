@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic interface</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Plugin -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+    <!-- Jqeury -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
+</head>
+<script>
+    $(document).ready(function(){
+
+            $(window).scroll( function(){
+                // fade in de los productos que se venden
+                $('.fadein').each( function(){
+                    var bottom_of_element = $(this).offset().top + $(this).outerHeight()
+                    var bottom_of_window = $(window).scrollTop() + $(window).height()
+                    
+                    if( bottom_of_window > bottom_of_element ){
+                        $(this).animate({'opacity':'1'},1)
+                    }
+                    
+                }); 
+            });
+
+        $('#change-bk-color').click(function() {
+            // Cambia entre modo oscuro y modo iluminado, cambiando todos los parametros de css mas las imagenes
+            if ($('header').css('background-color') != 'rgb(32, 32, 32)') {
+                $('#change-bk-color').css('background', 'rgb(32, 32, 32)')
+                $('header').css('background-color', 'rgb(32, 32, 32)')
+                $('section.buy_guitars').css('background-color', 'black')
+                $('section.buy_guitars div').css('background-color', 'rgb(32, 32, 32)')
+                changeImg('b', 'w')
+                $('section.buy_guitars div').css('color', 'white')
+                $('section.carrito').css('background-color', 'rgb(32, 32, 32)')
+                $('section.carrito h1').css('color', 'white')
+                $('section.carrito h2').css('color', 'white')
+                
+
+            } else {
+                $('header').css('background-color', 'black')
+                $('#change-bk-color').css('background', 'black')
+                $('section.buy_guitars').css('background-color', 'rgb(247,247,247)')
+                $('section.buy_guitars div').css('background-color', 'white')
+                changeImg('w', 'b')
+                $('section.buy_guitars div').css('color', 'black')
+                $('section.carrito').css('background-color', 'white')
+                $('section.carrito h1').css('color', 'black')
+                $('section.carrito h2').css('color', 'black')
+                
+            }
+        })
+
+        function changeImg(colorN, colorA) {
+            // Cambia la imagen a oscura o a iluminada
+            let imgs = $('img')
+
+            for (let i of imgs) {
+                let atr = $(i).attr('src')
+                let newAttr = atr.replace(colorA, colorN)
+                $(i).attr('src', newAttr)
+            }
+        }
+
+        var guitar = "" // Tendra todo el div de la guitarra seleccionada
+        var precio_total = 0 
+        $('.buy').click(function () {  
+            // Guarda el div y sus atributos y los introduce en la seccion de carrito
+            guitar = $(this).parent()
+            
+            let imgSrc = guitar.children().eq(0).attr('src')
+            let imgAlt = guitar.children().eq(0).attr('alt')
+            let precio = guitar.children().eq(1).text()
+            
+            let li = `<li>
+                    <img src="${imgSrc}" alt="${imgAlt}" />
+                    <h2>${precio}</h2>
+                    <button id='btn'>Eliminar</button>
+                </li>`
+            $('ol').append(li)
+
+            precio_total += parseInt(precio.split("Precio: ")[1].split("€")[0])
+            $('#total').text(precio_total)
+        })
+
+        $(document).on("click","#pagar",function() {
+            // Simula la realizacion de la compra, con el plugin swal y elimina la lista del carrito
+            swal("Compra realizada", "Su compra se ha realizado con exito", "success");
+            $('ol').children().remove()
+            $('#total').text("0")
+        })  
+
+        $(document).on("click","#btn",function() {
+            // Permite eliminar un producto individual de la lista de compra
+            let precio = $(this).parent().children().eq(1).text()
+            precio_total -= parseInt(precio.split("Precio: ")[1].split("€")[0])
+            $('#total').text(precio_total)
+
+            $(this).parent().remove()
+        })
+        
+    })
+</script>
+<body>
+    <!-- Header slidebar -->
+    <header>
+        <a href="#">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#carrito">Carrito</a>
+        <button id="change-bk-color">Click me</button>
+    </header>
+
+    <!-- Productos para comprar -->
+    <section class="buy_guitars" id="productos">
+        <div class="fadein">
+            <img src="img/1w.jpg" alt="1"/>
+            <h1>Precio: 650€</h1>
+            <button class="buy">Comprar</button>
+        </div>
+        <div class="fadein">
+            <img src="img/2w.jpg" alt="2" />
+            <h1>Precio: 800€</h1>
+            <button class="buy">Comprar</button>
+        </div>
+        <div class="fadein">
+            <img src="img/3w.jpg" alt="3" />
+            <h1>Precio: 400€</h1>
+            <button class="buy">Comprar</button>
+        </div>
+        <div class="fadein">
+            <img src="img/4w.jpg" alt="4" />
+            <h1>Precio: 670€</h1>
+            <button class="buy">Comprar</button>
+        </div>
+        <div class="fadein">
+            <img src="img/5w.jpg" alt="5" />
+            <h1>Precio: 922€</h1>
+            <button class="buy">Comprar</button>
+        </div>
+        <div class="fadein">
+            <img src="img/6w.jpg" alt="6" />
+            <h1>Precio: 1200€</h1>
+            <button class="buy">Comprar</button>
+        </div>
+    </section>
+
+    <!-- Lista de productos en carrito -->
+    <section class="carrito" id="carrito">
+        <h1>Productos añadidos a la cesta</h1>
+        <ol>
+        </ol>
+        <h2>Precio total: <strong id="total">0</strong>€</h2>
+        <button id="pagar">Realizar pago</button>
+    </section>
+</body>
+</html>

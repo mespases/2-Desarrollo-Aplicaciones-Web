@@ -1,0 +1,133 @@
+/* header */
+div.header {
+  background: -webkit-gradient(linear, left bottom, left top, from(#a9fc2d), to(#017901));
+  background: linear-gradient(to top, #a9fc2d, #017901);
+  height: 200px;
+  width: 100%;
+}
+
+div.header .logo {
+  float: right;
+  padding-top: 40px;
+  padding-right: 20px;
+}
+
+div.header h1 {
+  color: white;
+  padding-top: 70px;
+}
+
+/* column */
+div.clearfix {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+}
+
+/* Menu ul */
+div.menu {
+  width: 10%;
+}
+
+ul {
+  list-style: none;
+  margin-top: 15px;
+  padding: 0;
+}
+
+ul li {
+  background-color: #004e00;
+  color: white;
+  line-height: 33px;
+  margin-bottom: 10px;
+  height: 35px;
+}
+
+ul li::first-letter {
+  color: yellow;
+  font-size: 25px;
+}
+
+/* content */
+div.content {
+  width: 70%;
+  margin-left: 20px;
+}
+
+.content p,
+.news p {
+  font-size: 18px;
+}
+
+/* news */
+div.news {
+  border: 2px solid #017901;
+  height: 201px;
+  width: 21%;
+  margin-top: 18px;
+}
+
+/* footer */
+div.footer {
+  background: -webkit-gradient(linear, left bottom, left top, from(#017901), color-stop(#00af00), to(#a9fc2d));
+  background: linear-gradient(to top, #017901, #00af00, #a9fc2d);
+  height: 195px;
+  width: 100%;
+}
+
+div.footer p {
+  padding-left: 30px;
+  padding-top: 55px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+div.footer a {
+  float: right;
+  padding-right: 40px;
+  font-size: 17px;
+}
+
+/* media */
+@media screen and (max-width: 1230px) {
+  div.clearfix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  div.menu {
+    width: 28%;
+  }
+  div.content {
+    width: 64%;
+  }
+  div.news {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  div.clearfix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  div.menu {
+    width: 100%;
+  }
+  div.content {
+    width: 100%;
+  }
+  div.news {
+    width: 100%;
+  }
+  div.footer {
+    height: 225px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

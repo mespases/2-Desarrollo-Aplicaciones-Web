@@ -1,0 +1,157 @@
+// Variables
+$greendark: #004e00;
+$greenyellow: rgb(169, 252, 45);
+$green: rgb(1, 121, 1);
+$green2: rgb(0, 175, 0);
+$width100: 100%;
+
+// Functions
+@function gradient1($color1, $color2) {
+  @return linear-gradient(to top, $color1, $color2);
+}
+
+@function gradient2($color1, $color2, $color3) {
+  @return linear-gradient(to top, $color1, $color2, $color3);
+}
+
+// Mixins
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin right {
+  float: right;
+}
+
+/* header */
+div.header {
+  background: gradient1($greenyellow, $green);
+  height: 200px;
+  width: $width100;
+
+  .logo {
+    @include right;
+    padding: {
+      top: 40px;
+      right: 20px;
+    }
+  }
+  h1 {
+    color: white;
+    padding-top: 70px;
+  }
+}
+/* column */
+div.clearfix {
+  display: inline-flex;
+  width: $width100;
+}
+
+/* Menu ul */
+div.menu {
+  width: 10%;
+}
+
+ul {
+  list-style: none;
+  margin-top: 15px;
+  padding: 0;
+}
+
+ul li {
+  background-color: $greendark;
+  color: white;
+  line-height: 33px;
+  margin-bottom: 10px;
+  height: 35px;
+  &::first-letter {
+    color: yellow;
+    font-size: 25px;
+  }
+}
+
+/* content */
+div.content {
+  width: 70%;
+  margin-left: 20px;
+}
+
+.content p,
+.news p {
+  font-size: 18px;
+}
+
+/* news */
+div.news {
+  border: 2px solid $green;
+  height: 201px;
+  width: 21%;
+  margin-top: 18px;
+}
+
+/* footer */
+div.footer {
+  background: gradient2($green, $green2, $greenyellow);
+  height: 195px;
+  width: $width100;
+
+  p {
+    padding: {
+      left: 30px;
+      top: 55px;
+    }
+
+    font: {
+      weight: bold;
+      size: 22px;
+    }
+  }
+
+  a {
+    @include right;
+    padding-right: 40px;
+    font-size: 17px;
+  }
+}
+
+/* media */
+@media screen and (max-width: 1230px) {
+  div.clearfix {
+    @include flex;
+  }
+
+  div.menu {
+    width: 28%;
+  }
+
+  div.content {
+    width: 64%;
+  }
+
+  div.news {
+    width: $width100;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  div.clearfix {
+    @include flex;
+  }
+
+  div.menu {
+    width: $width100;
+  }
+
+  div.content {
+    width: $width100;
+  }
+
+  div.news {
+    width: $width100;
+  }
+
+  div.footer {
+    height: 225px;
+  }
+}

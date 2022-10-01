@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Face</title>
+</head>
+<style>
+    .cara, .izquierdo, .derecho, .boca {
+        transition: 1s;
+    }
+
+    .cara {
+        background-color: #b1b1b1;
+        height: 500px;
+        width: 500px;
+        margin-left: 100px;
+    }
+
+    .izquierdo, .derecho {
+        background-color: gray;
+        height: 70px;
+        width: 70px;
+        position: absolute;
+    }
+
+    .izquierdo {
+        margin-top: 80px;
+        margin-left: 100px;
+    }
+
+    .derecho {
+        margin-top: 80px;
+        margin-left: 325px;
+    }
+
+    .boca {
+        position: absolute;
+        width: 240px;
+        height: 70px;
+        margin-top: 350px;
+        margin-left: 120px;
+        border: 2px solid black;
+        border-top: none;
+    }
+
+    .cara:hover {
+        background-color: #ffe633;
+        border-radius: 50%;
+        box-shadow: 0 0 7px 2px black;
+        
+    }
+
+    .cara:hover .izquierdo, .cara:hover .derecho {
+        background-color: black;
+        border-top-left-radius: 40%;
+        border-top-right-radius: 40%;
+        border-bottom-left-radius: 40%;
+        border-bottom-right-radius: 40%;
+        height: 100px;
+    }
+
+    .cara:hover .boca {
+        border-bottom: 5px solid black;
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+</style>
+<body>
+    <div class="cara">
+        <div class="izquierdo"></div>
+        <div class="derecho"></div>
+        <div class="boca"></div>
+    </div>
+</body>
+</html>

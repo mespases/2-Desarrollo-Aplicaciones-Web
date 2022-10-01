@@ -1,0 +1,83 @@
+[
+    {
+        "elemento": "ACD123",
+        "tipo": "numeroRegistro",
+        "resultadoCorrecto": true
+    },{
+        "elemento": "AC123",
+        "tipo": "numeroRegistro",
+        "resultadoCorrecto": false
+    },{
+        "elemento": "ACGTHT123",
+        "tipo": "numeroRegistro",
+        "resultadoCorrecto": false
+    },{
+        "elemento": "145265",
+        "tipo": "numeroRegistro",
+        "resultadoCorrecto": false
+    },{
+        "elemento": "ACG124w",
+        "tipo": "numeroRegistro",
+        "resultadoCorrecto": false
+    }, {
+        "elemento": "Fernández J.",
+        "tipo": "nombre",
+        "resultadoCorrecto": true
+    }, {
+        "elemento": "López Ariadna M.",
+        "tipo": "nombre",
+        "resultadoCorrecto": false
+    }, {
+        "elemento": "López Ariadna M.",
+        "tipo": "nombre",
+        "resultadoCorrecto": true
+    }, {
+        "elemento": "Castillo JL.",
+        "tipo": "nombre",
+        "resultadoCorrecto": false
+    }, {
+        "elemento": "Castillo JSL.",
+        "tipo": "nombre",
+        "resultadoCorrecto": false
+    }, {
+        "elemento": "López M",
+        "tipo": "nombre",
+        "resultadoCorrecto": false
+    }, {
+        "elemento": "Martinez",
+        "tipo": "nombre",
+        "resultadoCorrecto": false
+    }, {
+        "elemento": "J.",
+        "tipo": "nombre",
+        "resultadoCorrecto": false
+    }, {
+        "elemento": "C/Federico lorca, 50",
+        "tipo": "direccion",
+        "resultadoCorrecto": true
+    }, {
+        "elemento": "Av.Argentina, 123",
+        "tipo": "direccion",
+        "resultadoCorrecto": true
+    }, {
+        "elemento": "C/lorenzo, 3",
+        "tipo": "direccion",
+        "resultadoCorrecto": false
+    }, {
+        "elemento": "Av.Gimenez Losantos, 40",
+        "tipo": "direccion",
+        "resultadoCorrecto":true
+    }, {
+        "elemento": "C/Almirante 45",
+        "tipo": "direccion",
+        "resultadoCorrecto": false
+    }, {
+        "elemento": "C/Almirante",
+        "tipo": "direccion",
+        "resultadoCorrecto":false
+    }, {
+        "elemento": "C/45, 45",
+        "tipo": "direccion",
+        "resultadoCorrecto": false
+    }
+]

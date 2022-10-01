@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanv" width="700" height="750" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var canvas = document.getElementById("myCanv");
+var context = canvas.getContext("2d");
+
+context.lineWidth=3;
+
+context.beginPath();
+context.moveTo(380, 130);
+context.bezierCurveTo(320, 310, 550, 100, 590, 80);
+context.lineWidth = 30;
+context.stroke();
+
+</script> 
+
+</body>
+</html>

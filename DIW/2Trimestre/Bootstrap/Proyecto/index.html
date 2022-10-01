@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gimnasia Deportiva</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <!-- Navbar scrollspy -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#carousel">Imagenes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aparatos">Aparatos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#form">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#comentarios">Comentarios</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Carousel -->
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/c1.jpg" alt="Los Angeles" class="d-block" style="width: 100%" max-height="800px" />
+          <div class="carousel-caption">
+            <h3>Potro</h3>
+            <p>Uno de los aparatos más técnicos</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/c2.jpg" alt="Potro con arcos" class="d-block" style="width: 100%" max-height="800px" />
+          <div class="carousel-caption">
+            <h3>Potro con arcos</h3>
+            <p>La exigencia de este aparato es máxima</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/c3.jpeg" alt="Anillas" class="d-block" style="width: 100%" max-height="800px" />
+          <div class="carousel-caption">
+            <h3>Anillas</h3>
+            <p>El aparato más duro en cuanto hablamos de fuerza</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Section, Collapse, Modal, Progres bar -->
+    <section id="aparatos" class="row w-100 m-0 p-3 pt-5" style="background: linear-gradient(180deg, #cda983b0, #bcbea9c9);">
+      <div class="row mt-5">
+        <div class="col-lg-4 mt-5">
+          <img src="img/suelo.jpg" alt="suelo" class="w-100 rounded-pill" data-bs-toggle="collapse" data-bs-target="#info_suelo"/>
+          <div id="info_suelo" class="collapse mt-3">
+            <h2 class="text-center">Suelo</h2>
+            <p style="text-align: justify;">
+              Uno de los aparatos más conocidos de todos, el suelo, aquí los atletas tienen un espacio cuadrado
+              donde pueden hacer toda clase de ejercicios dinámicos, lo cual serian las acrobacias, pero no nos 
+              olvidemos que hay una parte de fuerza, en donde el atleta tiene que realizar ciertos movimientos 
+              para demostrarla.
+            </p>
+            <a class="btn" style="background-color: white;" data-bs-toggle="modal" data-bs-target="#ganador_suelo">Campeon actual</a>
+            <div class="progress mt-3">
+              <div class="progress-bar" style="width:30%; background-color: red;">
+                Fuerza
+              </div>
+              <div class="progress-bar" style="width:50%; background-color: green;">
+                Tecnica
+              </div>
+              <div class="progress-bar" style="width:20%;">
+                Elasticidad
+              </div>
+            </div>
+            <div class="modal fade" id="ganador_suelo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Campeon actual</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h2>Artiom Dolgopiat</h2>
+                    <img src="img/ganador_suelo.jpg" alt="ganador suelo" class="w-100"/>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="col-lg-4 mt-5">
+          <img src="img/potro.jpg" alt="potro" class="w-100 rounded-pill" data-bs-toggle="collapse" data-bs-target="#info_potro_1" />
+          <div id="info_potro_1" class="collapse mt-3">
+            <h2 class="text-center">Potro en salto</h2>
+            <p style="text-align: justify;">
+              Este es uno de los aparatos que necesita mayor explosividad, se trata de correr hacia este obstáculo
+              y saltar por encima apoyando las manos y realizando el movimiento más complicado posible.
+            </p>
+            <a class="btn" style="background-color: white;" data-bs-toggle="modal" data-bs-target="#ganador_potro_1">Campeon actual</a>
+            <div class="progress mt-3">
+              <div class="progress-bar" style="width:15%; background-color: red;">
+                Fuerza
+              </div>
+              <div class="progress-bar" style="width:60%; background-color: green;">
+                Tecnica
+              </div>
+              <div class="progress-bar" style="width:25%;">
+                Elasticidad
+              </div>
+            </div>
+            <div class="modal fade" id="ganador_potro_1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Campeon actual</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h2>Shin Jea-Hwan</h2>
+                    <img src="img/ganador_potro.jpg" alt="ganador suelo" class="w-100"/>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 mt-5">
+          <img src="img/paralelas.jpg" alt="paralelas" class="w-100 rounded-pill" data-bs-toggle="collapse" data-bs-target="#info_paralelas" />
+          <div id="info_paralelas" class="collapse mt-3">
+            <h2 class="text-center">Paralelas</h2>
+            <p style="text-align: justify;">
+              Es uno de los aparatos más técnicos y más elegante, se tienen que realizar los movimientos más 
+              complicados posibles pero a la vez con la mayor elegancia posible.
+            </p>
+            <a class="btn" style="background-color: white;" data-bs-toggle="modal" data-bs-target="#ganador_paralelas">Campeon actual</a>
+            <div class="progress mt-3">
+              <div class="progress-bar" style="width:33.33%; background-color: red;">
+                Fuerza
+              </div>
+              <div class="progress-bar" style="width:33.33%; background-color: green;">
+                Tecnica
+              </div>
+              <div class="progress-bar" style="width:33.33%;">
+                Elasticidad
+              </div>
+            </div>
+            <div class="modal fade" id="ganador_paralelas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Campeon actual</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h2>Zou Jingyuan</h2>
+                    <img src="img/ganador_paralelas.jpeg" alt="ganador suelo" class="w-100"/>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      
+      <div class="row">
+        <div class="col-lg-4 mt-5">
+          <img src="img/barra.jpeg" alt="barra" class="w-100 rounded-pill" data-bs-toggle="collapse" data-bs-target="#info_barra" />
+          <div id="info_barra" class="collapse mt-3">
+            <h2 class="text-center">Barra fija</h2>
+            <p style="text-align: justify;">
+              Es uno de los aparatos más vistos, ya que los movimientos que se realizan sobre ella, 
+              son de admirar, mientras se dan vueltas sobre la barra, se tienen que realizar soltadas de la barra 
+              haciendo movimientos acrobáticos y volver a caer agarrándose de la barra y sin dejar de rotar sobre 
+              la barra.
+            </p>
+            <a class="btn" style="background-color: white;" data-bs-toggle="modal" data-bs-target="#ganador_barra">Campeon actual</a>
+            <div class="progress mt-3">
+              <div class="progress-bar" style="width:10%; background-color: red;">
+                Fuerza
+              </div>
+              <div class="progress-bar" style="width:70%; background-color: green;">
+                Tecnica
+              </div>
+              <div class="progress-bar" style="width:20%;">
+                Elasticidad
+              </div>
+            </div>
+            <div class="modal fade" id="ganador_barra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Campeon actual</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h2>Daiki Hashimoto</h2>
+                    <img src="img/ganador_barra.jpeg" alt="ganador suelo" class="w-100"/>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-5"> 
+          <img src="img/anillas.jpg" alt="anillas" class="w-100 rounded-pill" data-bs-toggle="collapse" data-bs-target="#info_anillas" />
+          <div id="info_anillas" class="collapse mt-3">
+            <h2 class="text-center">Anillas</h2>
+            <p style="text-align: justify;">
+              Este es el aparato que requiere la mayor fuerza posible, ya que se tienen que realizar ciertos 
+              movimientos estáticos de tensión máxima temblando lo menos posible debido a que si no, eso descontaría 
+              puntos al atleta.
+            </p>
+            <a class="btn" style="background-color: white;" data-bs-toggle="modal" data-bs-target="#ganador_anillas">Campeon actual</a>
+            <div class="progress mt-3">
+              <div class="progress-bar" style="width:80%; background-color: red;">
+                Fuerza
+              </div>
+              <div class="progress-bar" style="width:15%; background-color: green;">
+                Tecnica
+              </div>
+              <div class="progress-bar" style="width:5%;">
+                Elasticidad
+              </div>
+            </div>
+            <div class="modal fade" id="ganador_anillas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Campeon actual</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h2>Liu Yang</h2>
+                    <img src="img/ganador_anillas.jpeg" alt="ganador suelo" class="w-100"/>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-5">
+          <img src="img/potro_con_arcos.jpg" alt="potro con arcos" class="w-100 rounded-pill" data-bs-toggle="collapse" data-bs-target="#info_potro_2" />
+          <div id="info_potro_2" class="collapse mt-3">
+            <h2 class="text-center">Potro con arcos</h2>
+            <p style="text-align: justify;">
+              Visto desde fuera es uno de los aparatos que no llaman la atención, pero una vez se está sobre él, se 
+              comprueba que es uno de los más difíciles de todos, necesita fuerza, técnica, elasticidad y mucha precisión.
+            </p>
+            <a class="btn" style="background-color: white;" data-bs-toggle="modal" data-bs-target="#ganador_potro_2">Campeon actual</a>
+            <div class="progress mt-3">
+              <div class="progress-bar" style="width:40%; background-color: red;">
+                Fuerza
+              </div>
+              <div class="progress-bar" style="width:50%; background-color: green;">
+                Tecnica
+              </div>
+              <div class="progress-bar" style="width:10%;">
+                Elasticidad
+              </div>
+            </div>
+            <div class="modal fade" id="ganador_potro_2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Campeon actual</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h2>Max Whitlock</h2>
+                    <img src="img/ganador_arcos.jpg" alt="ganador suelo" class="w-100"/>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Formulario de contacto -->
+    <section id="form" class="" style="background: linear-gradient(0deg, #545454, #cbccbb); padding: 13rem 0;">
+      <h2 class="text-center mt-5 pt-5">¿Quieres empezar a entrenar Gimnasia Deportiva?</h2>
+      <p class="text-center">Introduce tu email y la razón por la cual te gustaría empezar a entrenar con nosotros</p>
+      <form action="#" class="w-50 mb-5 pb-5" style="margin: 0 auto;">
+        <div class="mb-3 mt-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        <label for="comment">Explícanos:</label>
+        <textarea class="form-control" rows="5" id="comment" name="text" style="resize: none;"></textarea>
+        <button type="submit" class="btn btn-light mt-3">Enviar</button>
+      </form>
+    </section>
+    
+    <!-- media objects -->
+    <section id="comentarios" class="p-5 text-white" style="background-color: black;">
+      <div class="media d-flex align-items-center flex-wrap justify-content-center">
+        <img class="rounded-circle" src="img/xinso.jpg" alt="Generic placeholder image" width="150px"/>
+        <div class="media-body w-75">
+          <h4 class="mt-0 ms-3">Xinso</h4>
+          <p class="ms-3">
+            Soy atleta de gimnasia desde hace ya 28 años y consideró que es uno de los deportes 
+            más bonitos y completos, aunque para llegar al alto nivel requiere dejar atrás muchas 
+            cosas y enfrentarse a miles de problemas cada día, merece la pena solo por esos momentos 
+            de máxima felicidad que me ha aportado este deporte.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start" id="demo">
+      <div class="offcanvas-header">
+        <h1 class="offcanvas-title">Atletas</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <p><strong>Yuri Van Gelder</strong> -> Anillas</p>
+        <p><strong>Nile Wilson</strong> -> Barra y paralelas</p>
+        <p><strong>Nestor Abad</strong> -> All around</p>
+        <p><strong>Simone Biles</strong> -> Suelo</p>
+      </div>
+    </div>
+    <a data-bs-toggle="offcanvas" data-bs-target="#demo" class="fixed-bottom" style="text-decoration: none; color: rgb(0, 153, 255); font-size: 1.2rem;">
+      <strong>Click para ver mis atletas favoritos</strong>
+    </a>
+  </body>
+</html>

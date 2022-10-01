@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang='es'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta content='width=device-width, user-scalable=no,name='viewport'>
+        <title>Canvas test</title>
+    </head>
+    <body>
+    <canvas id='myCanv' width="900" height="500" style="border: 2px solid black;"></canvas>
+    <script>
+        const mywidth="1000px";
+        const myheight="500px";
+        var canvas = document.getElementById("myCanv");
+        var context = canvas.getContext("2d");
+        var end = false
+        var top = false
+        
+        let spx=400, spy=200;
+        context.lineWidth = 10;
+        let backw=false;
+        let myr=false;
+        function Moveswoosh(a, b) {
+            // clean canvas
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.beginPath()
+            //debugger; if its inside bounds
+            if (spx+125>=canvas.width || spx<=0 ){
+                end = true
+            } 
+            if (spx == 0) {
+                end = false
+            }
+
+            if (end) {
+                spx-=2; 
+            } else {
+                spx+=2;
+            }
+            
+            context.moveTo(spx, spy);
+            //context.strokeRect
+            context.bezierCurveTo(spx+50, spy+110, spx+125, spy-80, spx+125, spy-90);
+            //context.rotate(Math.PI * (i / 1000));
+            context.stroke();
+            //debugger;
+            window.requestAnimationFrame(() => {
+            Moveswoosh(3,0);
+            });
+        }
+        Moveswoosh(3,1);
+    </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/867eec2026.js" crossorigin="anonymous"></script>
+    <title>Music Player</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+    <audio id="audio">
+        <source src="audio/House_of_the_Rising_Sun.mp3" type="audio/mp3" id="source">
+        <!--<source src="audio/House_of_the_Rising_Sun.mp3" type="audio/mp3">
+        <source src="audio/Sultans_Of_Swing.mp3" type="audio/mp3">-->
+    </audio>
+
+    <div class="box">
+
+        <img src="img/the-animals.jpg" alt="img" id="img">
+        <p id="titulo">Esperando una canción</p>
+
+        
+        <input type="range" min="0" max="100" step="0.100" value="0" id="progres"/>
+
+        <section class="buttons_box">
+            <i class="fas fa-random px_S" onclick="random()"></i>
+            <i class="fas fa-backward px" onclick="setprevSong()"></i>
+            <i class="far fa-play-circle" onclick="playAudio()" id="play"></i>
+            <i class="fas fa-forward px" onclick="setNextSong()"></i>
+            <i class="fas fa-stop px_S" onclick="stopAudio()"></i>
+        </section>
+    </div>
+</body>
+<script src="code.js"></script>
+</html>

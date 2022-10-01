@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3</title>
+    <link rel="shortcut icon" href="int.png">
+    <style>
+        img {
+            width: 50px;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!--<audio>
+        <source src="yt1s.com-DireStraitsSultansOfSwing.mp3" />
+    </audio>-->
+    <audio id="audio">
+        <source src="yt1s.com-DireStraitsSultansOfSwing.mp3" type="audio/ogg" type="audio/mp3">
+    </audio>
+    <img src="13021.png" onclick="inicia()">
+    <img src="26445.png" onclick="para()">
+    <img src="descarga.png" onclick="stopAudio()">
+</body>
+<script>
+    var aud = document.getElementById("audio"); 
+    function inicia() {   
+        aud.play()
+    }
+
+    function para() {  
+        aud.pause()
+    }
+
+    function stopAudio() {  
+        aud.currentTime = 0
+        aud.pause()
+    }
+
+    
+</script>
+</html>

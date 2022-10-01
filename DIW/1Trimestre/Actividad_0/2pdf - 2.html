@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<style>
+p > i {
+   font-style: italic;
+}
+
+h1 b {
+   color: red;
+}
+
+ul ul {
+   background-color: lightblue;
+}
+
+ul ul li {
+   color: red;
+   font-size: 28px;
+}
+
+ul ul li.nivel1 {
+   color: green;
+   font-size: 35px;
+}
+
+.nivel1 {
+   color: palevioletred;
+}
+
+.nivel2 {
+   color: blue;
+   font-size: 20px;
+}
+
+#mydent {
+   color: orange;
+   font-size: 15px;
+}
+
+ul ul div li {
+   color: yellow;
+   font-size: 42px;
+}
+
+ul + div {
+   background-color: greenyellow;
+   font-weight: bold;
+}
+
+div + div {
+   background-color: greenyellow;
+}
+
+</style>    
+</head>
+<body>  
+<h1><p> <i>Título</i>: <b>Anidamiento y agrupamiento </b>de selectors</p></h1>
+<ul>
+ <li class="nivel1">Agrupamiento</li>
+ <li class="nivel1" >Anidamiento</li>
+ <ul>
+    <li class="nivel2"> Agrupamiento de hijos</li>
+    <li class="nivel1"> Agrupamiento de adyacentes</li>
+    <li> Anidamiento común </li>
+    <li id="mydent" class="nivel1"> Anidamiento único </li>
+    <div><li>Greatgrandchilden</li></div>
+ </ul>
+ <div>Divider sibling1</div>
+ <div>Divider sibling2</div>
+</ul>
+</body>
+</html>

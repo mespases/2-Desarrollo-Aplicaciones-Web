@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego</title>
+  </head>
+  <body>
+    <h2>Piedra, papel o tijera !</h2>
+    <section>
+      <div>
+        <h4>Jugador 1</h4>
+        <img src="./img/papel.png" alt="jugador_1" id="jugador_1" />
+      </div>
+      <div>
+        <h4>Jugador 2</h4>
+        <img src="./img/papel.png" alt="jugador_2" id="jugador_2" />
+      </div>
+    </section>
+    <h3 id="resultado"></h3>
+  </body>
+  <script src="./code.js"></script>
+  <style>
+    body {
+      background-color: rgb(58 58 58);
+      color: white;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 2rem;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    section div {
+      margin: 2rem;
+    }
+
+    img {
+      width: 25rem;
+    }
+  </style>
+</html>

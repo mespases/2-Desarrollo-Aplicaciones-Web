@@ -1,0 +1,162 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IES Son Ferrer</title>
+    <style>
+        /* header */
+        div.header {
+            background: linear-gradient(to top, greenyellow, green);
+            height: 200px;
+            width: 100%;
+        }
+        div.logo {
+            float: right;
+            padding-top: 40px;
+            padding-right: 20px;
+        }
+        div.header h1 {
+            color: white;
+            padding-top: 70px;
+        }
+        /* column */
+        div.clearfix {
+          display: inline-flex;
+          width: 100%;
+        }
+
+        /* Menu ul */
+        div.menu {
+          width: 10%;
+        }
+        div.menu ul {
+            list-style: none;
+            margin-top: 15px;
+            padding: 0;
+        }
+        div.menu ul li {
+            background-color: #004e00;
+            color: white;
+            line-height: 33px;
+            margin-bottom: 10px;
+            height: 35px;
+        }
+        div.menu ul li::first-letter {
+            color: yellow;
+            font-size: 25px;
+        }
+
+        /* content */
+        div.content {
+            width: 70%;
+            margin-left: 20px;
+        }
+        div.content p, div.news p {
+          font-size: 18px;
+        }
+
+        /* news */
+        div.news {
+            border: 2px solid green;
+            height: 201px;
+            width: 21%;
+            margin-top: 18px;
+        }
+
+        /* footer */
+        div.footer {
+            background: radial-gradient(green, rgb(0, 175, 0), yellowgreen);
+            height: 195px;
+            width: 100%;
+        }
+        div.footer p {
+          padding-left: 30px;
+          padding-top: 55px;
+          font-weight: bold;
+          font-size: 22px;
+        }
+        div.footer a {
+          float: right;
+          padding-right: 40px;
+          font-size: 17px;
+        }
+
+        @media screen and (max-width: 1230px) {
+          div.clearfix {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          div.menu {
+            width: 28%;
+          }
+          div.content {
+            width: 64%;
+          }
+
+          div.news {
+            width: 100%;
+          }
+        }
+
+        @media screen and (max-width: 590px) {
+          div.clearfix {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          div.menu {
+            width: 100%;
+          }
+          div.content {
+            width: 100%;
+          }
+
+          div.news {
+            width: 100%;
+          }
+          div.footer {
+            height: 225px;
+          }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo"><img src="http://www.iessonferrer.net/wp-content/uploads/sites/16/2021/09/logoSF.png" ></div>  
+    <h1>IES SON FERRER- DAW</h1>
+    <p> </p>
+</div>
+
+<div class="clearfix">
+  <div class="column menu">
+    <ul>
+      <li>The Students</li>
+      <li>The Curriculum</li>
+      <li>The Professors</li>
+      <li>The Classroom</li>
+    </ul>
+  </div>
+
+  <div class="column content">
+    <h1>The Subject - DIW</h1>
+    <p>It is indeed a pretty amazing place, where the mixture of youth and experience blend perfectly</p>
+    <p>Alumni can learn about web layouts and responsive web pages during the DIW course. All this and  more</p>
+    <p>Not only do they learn technical knowledge but also principles for life. </p>
+  </div>
+
+  <div class="column news">
+      <h2>Latest News</h2>
+    <p> The grades in 21/22 are beating those of the previous year by a wide margin</p>
+  </div>
+
+</div>
+
+
+<div class="footer">
+  <p>WHERE THE MAGIN HAPPENS
+    <a class="copyLeft" href="https://copyleft.org/"><p><span>&copy;</span>CopyLeft</p></a>
+    </p>
+</div>
+</body>
+</html>

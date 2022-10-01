@@ -1,0 +1,580 @@
+body {
+  background-color: #000000;
+  font-family: sans-serif, Arial, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+body.sign_in {
+  background-color: #dbdbdb;
+}
+
+/** Header **/
+nav {
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+}
+
+nav div.logo {
+  width: 15%;
+  margin-right: 10em;
+}
+
+nav div.logo img {
+  width: 95px;
+  margin-left: 4em;
+  margin-top: 0.2em;
+}
+
+div.sign_in_a {
+  width: 20%;
+}
+
+nav div.sign_in_a a {
+  color: white;
+  width: 120px;
+  height: 26px;
+  border: 1px solid;
+  border-radius: 10px;
+  line-height: 26px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  float: right;
+  transition: 0.4s;
+}
+
+nav div.sign_in_a a:hover {
+  color: #121212;
+  background-color: white;
+  box-shadow: 1px 1px 10px 0px #ffffff7e;
+  transition: 0.4s;
+}
+
+nav div.search_bar {
+  width: 50%;
+}
+
+nav div.search_bar input {
+  width: 90%;
+  height: 20px;
+  border-radius: 7px;
+}
+
+nav div.search_bar button i {
+  cursor: pointer;
+}
+
+.transparetn {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+/** Content **/
+div.content {
+  display: flex;
+  justify-content: center;
+}
+
+div div.trailer iframe {
+  width: 861px; 
+  height: 484px;
+}
+
+div div.right {
+  background-color: #161616;
+  width: 450px; 
+  height: 484px;
+}
+
+div div.right div.top, div div.right div.bottom {
+  padding: 15px 15px 15px 15px;
+}
+
+div div.right div.top img {
+  width: 90px;
+  height: 130px;
+  float: left;
+}
+
+div div.right div.top h5 {
+  color: white;
+  margin-top: 10px;
+  padding-left: 105px;
+  font-size: 16px;
+}
+div div.right div.top h5 p.val {
+  color: white;
+  display: inline;
+  float: right;
+  margin: 0;
+  padding: 0;
+  font-family: unset;
+}
+
+div div.right div.top h5 p.w {
+  color: #919191;
+}
+
+div div.right div.top i.amarillo {
+  float: right;
+  color: yellow;
+  padding-left: 4px;
+}
+
+div div.right div.top p.line {
+  color: white;
+  display: inline;
+  padding-left: 17px;
+  text-align: justify;
+}
+
+div div.right div.top p {
+  color: #919191;
+  padding-left: 105px;
+}
+
+div.right hr {
+  margin: 2em 1em 1em 1em;
+  border-color: rgb(253 246 246 / 20%);
+}
+
+div.right div.bottom h5 {
+  color: #919191;
+  margin-top: 0;
+  text-align: justify;
+}
+
+div.right div.bottom h5.white {
+  color: white;
+}
+
+/** Footer **/
+div.slider {
+  margin-left: 7em;
+  padding-right: 10em;
+}
+
+div.slider ul li div.film {
+  width: 300px;
+  height: 445px;
+  margin: 5em 50px 0 50px;
+}
+
+div.slider ul li div.film a { 
+  cursor: pointer;
+}
+
+.cS-hidden {
+  height: 1px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  overflow: hidden;
+}
+
+/* Comments */
+section.comments {
+  color: white;
+  text-align: center;
+  margin-top: 6em;
+}
+
+section.comments h3 {
+  font-size: 2em;
+  margin-right: 23em;
+}
+
+section.comments form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.comments form textarea {
+  background-color: #282828;
+  color: #919191;
+  width: 70em;
+  height: 8em;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+section.comments form div.comment_btn {
+  background-color: #121212;
+  width: 58.6em;
+  height: 2em;
+}
+
+section.comments form div.comment_btn div.puntuation {
+  position: absolute;
+  font-size: 1.7em;
+  margin-left: 7px;
+}
+
+section.comments form div.comment_btn div.puntuation label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+section.comments form div.comment_btn div.puntuation label i {
+  cursor: pointer;
+}
+
+section.comments form div.comment_btn div.puntuation label.like input:checked + i {
+  color: #0088ffc7;
+}
+
+section.comments form div.comment_btn div.puntuation label.dislike input:checked + i {
+  color: #bd0000c7;
+}
+
+section.comments form div.comment_btn button {
+  background-color: rgb(38 38 38);
+  color: white;
+  text-shadow: 1px 1px 4px #ffffffb5;
+  border: 1px solid #525252;
+  position: relative;
+  float: right;
+  line-height: 2em;
+  width: 7em;
+}
+
+section.comments > p {
+  margin-top: 2em;
+  margin-right: 37em;
+  font-size: 1.2em;
+}
+
+section.comments hr {
+  width: 59em;
+  border-color: rgb(253 246 246 / 20%);
+}
+
+section.comments ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+section.comments ul li {
+  background-color: #46414173;
+  border-radius: 4px;
+  list-style: none;
+  margin-bottom: 3em;
+}
+
+section.comments ul li article {
+  width: 59em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+section.comments ul li article i {
+  font-size: 4em;
+  margin: 0.2em;
+}
+
+section.comments ul li article i.fa-thumbs-up {
+  position: absolute;
+  color: #0088ffc7;
+  font-size: 1.4em;
+  padding: 0em 2.2em 1.6em;
+}
+
+section.comments ul li article i.fa-thumbs-down {
+  position: absolute;
+  color: #bd0000c7;
+  font-size: 1.4em;
+  padding: 0em 2.2em 1.6em;
+}
+
+section.comments ul li article div.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1em;
+  padding-top: 0.8em;
+}
+
+section.comments ul li article div.text h4 {
+  font-size: 1.2em;
+  font-weight: 800;
+  margin: 0;
+}
+
+section.comments ul li article div.text p {
+  color: #919191;
+  text-align: justify;
+}
+
+/* Sign in */
+div.sesion_box {
+  text-align: center;
+  margin-top: 5em;
+}
+
+div.sesion_box section.sesion {
+  background: linear-gradient(45deg, #0000003d, #fff70014);
+  width: 23em;
+  height: 28em;
+  margin: 0 auto;
+  box-shadow: 3px 1px 6px #0000006e;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.sesion_box i {
+  margin-left: 0;
+}
+
+div.sesion_box section.sesion input {
+  background-color: transparent;
+  width: 16em;
+  height: 1.5em;
+  margin-bottom: 2em;
+  font-size: 0.9em;
+  border-width: 0 0 2px;
+  border-color: #00000066;
+  outline: none;
+}
+
+div.sesion_box section.sesion input:focus {
+  border-color: #000000;
+}
+
+div.sesion_box section.sesion button {
+  background: linear-gradient(172deg, #c3b31f 20%, #8d7e13a6 75%);
+  width: 9em;
+  height: 2em;
+  display: block;
+  margin: 0 auto;
+  border-radius: 7px;
+  font-size: 1em;
+  transition: 0.6s;
+}
+
+div.sesion_box section.sesion p {
+  margin-bottom: 1.2em;
+}
+
+div.sesion_box section.sesion p input {
+  padding-left: 5px;
+}
+
+div.sesion_box section.createSesion p {
+  font-size: 0.9em;
+  margin-top: 12px;
+  margin-bottom: 1.4em;
+}
+
+div.sesion_box section.createSesion a {
+  background: linear-gradient(172deg, #c3b31f 20%, #8d7e13a6 75%);
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 5px 15px 5px 15px;
+  font-size: 1em;
+  margin-top: 2em;
+  transition: 0.6s;
+}
+
+div.sesion_box section.createSesion a:hover, div.sesion_box section.sesion button:hover {
+  background-color: #343131;
+  transition: 1s;
+}
+
+@media screen and (max-width: 1255px) {
+  div.sign_in_a {
+    width: 16%;
+  }
+}
+
+@media screen and (max-width: 1172px) {
+  div.content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div div.trailer iframe {
+    width: 764px;
+  }
+
+  div div.right {
+    width: 764px;
+    height: 370px;
+  }
+
+  div.slider {
+    padding-left: 3em;
+  }
+
+  section.comments h3 {
+    margin-right: 19em;
+  }
+
+  section.comments form textarea {
+    width: 60em;
+  }
+
+  section.comments form div.comment_btn {
+    width: 50.3em;
+  }
+
+  section.comments > p {
+    margin-right: 30em;
+  }
+
+  section.comments hr {
+    width: 50em;
+  }
+
+  section.comments ul li article {
+    width: 50em;
+  }
+}
+
+@media screen and (max-width: 962px) {
+  div.sign_in_a {
+    width: 22%;
+  }
+
+  nav div.logo {
+    width: 6%;
+    margin-right: 9em;
+  }
+
+  nav div.logo img {
+    margin-left: 1em;
+  }
+
+  iframe {
+    display: none;
+  }
+
+  div div.right {
+    width: 645px;
+  }
+
+  section.comments h3 {
+    margin-right: 16em;
+  }
+
+  section.comments form textarea {
+    width: 53em;
+  }
+
+  section.comments form div.comment_btn {
+    width: 44.4em;
+  }
+
+  section.comments > p {
+    margin-right: 25em;
+  }
+
+  section.comments hr {
+    width: 44em;
+  }
+
+  section.comments ul li article {
+    width: 44em;
+  }
+
+}
+
+@media screen and (max-width: 962px) { 
+  nav div.search_bar {
+    display: none;
+  }
+
+  div.sign_in_a {
+    width: 71%;
+    margin-right: 1em;
+  }
+
+  div.slider {
+    padding-left: 0em;
+  }
+
+  section.comments h3 {
+    margin-right: 12em;
+  }
+
+  section.comments form textarea {
+    width: 43em;
+  }
+
+  section.comments form div.comment_btn {
+    width: 36.1em;
+  }
+
+  section.comments > p {
+    margin-right: 18em;
+  }
+
+  section.comments hr {
+    width: 36em;
+  }
+
+  section.comments ul li article {
+    width: 36em;
+  }
+
+}
+
+@media screen and (max-width: 812px) { 
+  div div.right {
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 636px) {
+  section.comments h3 {
+    margin-right: 6em;
+  }
+
+  section.comments form textarea {
+    width: 28em;
+    height: 12em;
+  }
+
+  section.comments form div.comment_btn {
+    width: 23.6em;
+  }
+
+  section.comments > p {
+    margin-right: 8em;
+  }
+
+  section.comments hr {
+    width: 24em;
+  }
+
+  section.comments ul li article {
+    width: 24em;
+  }
+
+  div.slider {
+    padding-left: 0em;
+    margin-left: 1em;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  div.sesion_box section.sesion {
+    width: 20em;
+  }
+
+  div.sesion_box section.sesion input {
+    width: 14em;
+  }
+}

@@ -1,0 +1,160 @@
+body {
+  background: #150050;
+  color: white;
+}
+
+.mb-6 {
+  margin-bottom: 7rem;
+}
+
+.navbar button {
+  background-color: white;
+}
+
+/* nav */
+.bg-dark-uno {
+  background-color: #000000b0;
+}
+
+.bg-dark-dos {
+  background-color: #150050;
+}
+
+.bg-dark-tres {
+  background-color: #3f0071;
+}
+
+.bg-dark-cuatro {
+  background-color: #610094;
+}
+
+.bg-dark-cinco {
+  background-color: #8900d3;
+  color: white;
+  transition: 0.4s;
+}
+
+.bg-dark-cinco:hover {
+  background-color: #6f00aa;
+  color: white;
+  transition: 0.4s;
+}
+
+.nav-a {
+  color: white;
+  transition: 0.4s;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.nav-a:hover {
+  color: white;
+  text-shadow: 1px 2px 20px white;
+  font-size: 1.05rem;
+  transition: 0.4s;
+}
+
+/* home */
+section#home div p {
+  text-align: justify;
+}
+
+section#home div h5 {
+  color: #fb9c4d;
+}
+
+section#home p a {
+  color: #fb9c4d;
+}
+
+section#home img {
+  height: 23rem;
+  filter: drop-shadow(2px 4px 7px #a806ff);
+}
+
+p a {
+  color: #fb9c4d;
+}
+
+/* About me */
+section#about section p {
+  text-align: justify;
+}
+
+section#about section h4 {
+  color: #fb9c4d;
+}
+
+section#about div div img {
+  width: 4rem;
+  margin: 1rem;
+  filter: drop-shadow(2px 4px 7px rgba(255, 255, 255, 0.514));
+}
+
+/* knowledges */
+section#knowledges div.container img {
+  height: 5rem;
+  margin: 2rem;
+  transition: 0.6s;
+}
+
+section#knowledges div.container img:hover {
+  height: 5.4rem;
+  filter: drop-shadow(2px 4px 3px white);
+  transition: 0.6s;
+}
+
+/* footer */
+#contact {
+  margin-top: 5rem;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+textarea {
+  resize: none;
+}
+
+footer#contact p {
+  color: #fb9c4d;
+}
+
+@media screen and (max-width: 1085px) {
+  #home img {
+    display: none;
+  }
+
+  #home div {
+    width: 50% !important;
+    margin: 0 !important;
+  }
+
+  #about div section {
+    width: 80% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #about div img.me {
+    width: 50% !important;
+    margin: 0 0 3rem !important;
+    padding: 0 !important;
+  }
+
+  footer form {
+    width: 60% !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #home div {
+    width: 80% !important;
+  }
+
+  footer form {
+    width: 80% !important;
+  }
+}
